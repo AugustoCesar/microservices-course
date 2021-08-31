@@ -41,3 +41,4 @@ build/
 
 ##PostgreSQL Docker##
 /PostgreSQL
+/postgres-hr-user

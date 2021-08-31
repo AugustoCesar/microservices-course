@@ -1,0 +1,17 @@
+RODANDO POSTGRES E PGADMIN VIA DOCKER
+
+https://renatogroffe.medium.com/postgresql-docker-executando-uma-inst%C3%A2ncia-e-o-pgadmin-4-a-partir-de-containers-ad783e85b1a4
+
+
+docker run -p 5432:5432 --name hr-worker-pg12 --network hr-net -e POSTGRES_PASSWORD=1234567 -e POSTGRES_DB=db_hr_worker -v /home/augusto/workspaces/ws-microservice-course/PostgreSQL:/var/lib/postgresql/data -d postgres:12-alpine
+
+docker run -p 5433:5433 --name hr-user-pg12 --network hr-net -e POSTGRES_PASSWORD=1234567 -e POSTGRES_DB=db_hr_user -v /home/augusto/workspaces/ws-microservice-course/postgres-hr-user/PostgreSQL:/var/lib/postgresql/data -d postgres:12-alpine
+
+
+
+rodar os containers
+
+1º - docker start hr-worker-pg12
+
+2º - docker start hr-user-pg12
+
